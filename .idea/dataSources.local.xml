@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-243.21565.193">
-    <data-source name="postgres@localhost" uuid="874e81db-d53b-4d6f-b787-d2a7a6749ce0">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>java16</user-name>
-      <schema-mapping />
-    </data-source>
-    <data-source name="postgres@localhost [2]" uuid="4fa2a345-10be-4721-ae16-4e08f7660023">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>java16</user-name>
-      <schema-mapping />
-    </data-source>
     <data-source name="postgres@localhost [3]" uuid="499139c4-f901-4f0d-9bd0-0adf8a98b529">
+      <database-info product="PostgreSQL" version="17.2" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.2" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="java16@localhost" uuid="fc24f8df-3610-4145-8f82-ad9a3adf4dd0">
       <database-info product="PostgreSQL" version="17.2" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.2" exact-driver-version="42.7">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
