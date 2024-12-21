@@ -84,3 +84,15 @@ select author_firstName ,author_lastName, author_email,author_dateOfBirth, autho
 from authors left join books on authors.author_id = books.author_id left join publishers on books.publisher_id = publishers.publisher_id;
 --17.Авторлордун толук аты-жону жана китептери чыксын, китеби жок болсо null чыксын.
 select author_firstName ,author_lastName, book_name from authors left join books on authors.author_id= books.author_id;
+--18.Кайсы тилде канча китеп бар экендиги ылдыйдан ойлдого сорттолуп чыксын.
+select language_name, count(book_id) from languages join books on languages.language_id= books.language_id group by language_name
+order by language_name desc;
+--19.Издательствонун аттары жана алардын тапкан акчасынын оточо суммасы тегеректелип чыгарылсын.
+select publisher_name, round(avg(book_price)) from publishers join books on publishers.publisher_id = books.publisher_id
+group by publisher_name order by publisher_name desc;
+--20.2010-2015 жылдардын арасындагы китептер жана автордун аты-фамилиясы чыксын.
+select author_firstName, author_lastName, book_name from authors join books on authors.author_id = books.author_id where
+    book_publishedYear between '2010-01-01' and '2015-12-31';
+--21.2010-2015 жылдардын арасындагы китептердин авторлорунун толук аты-жону жана алардын тапкан акчаларынын жалпы суммасы чыксын.
+select concat(author_firstName,' ',author_lastName) as fullName, sum(book_price) from authors join books on authors.author_id = books.author_id where
+    book_publishedYear between '2010-01-01' and '2015-12-31' group by fullName;
